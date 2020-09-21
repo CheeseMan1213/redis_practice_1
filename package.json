@@ -1,0 +1,27 @@
+{
+  "name": "redis_practice_1",
+  "version": "1.0.0",
+  "description": "This is me practicing with Redis. I am following a YouTube video = Learn how to do caching in NodeJS using Redis = https://www.youtube.com/watch?v=RL9mnX0qXhY",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CheeseMan1213/redis_practice_1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CheeseMan1213/redis_practice_1/issues"
+  },
+  "homepage": "https://github.com/CheeseMan1213/redis_practice_1#readme",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "express": "^4.17.1",
+    "redis": "^3.0.2",
+    "response-time": "^2.3.2"
+  }
+}
