@@ -1,3 +1,10 @@
+# Using thhe vscode extension "REST Client" by humao.rest-client
+# publisher = "Huachao Mao" 
+
 ### GET all rockets
 
 GET http://localhost:3000/rockets
+
+### Get rocket by rocket_id
+
+GET http://localhost:3000/rockets/falcon1
