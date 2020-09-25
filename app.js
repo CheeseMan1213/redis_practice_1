@@ -23,8 +23,8 @@ app.use(responseTime())
 
 // Instantiating Redis client.
 const client = redis.createClient({
-    host: 'AWS',
-    port: 'AWS'
+    host: 'test-redis-3.pgrlab.0001.use1.cache.amazonaws.com',
+    port: 6379
 })
 // const client = redis.createClient({
 //     host: '127.0.0.1',
@@ -75,5 +75,21 @@ app.get('/rockets/:rocket_id', async (req, res, next) => {
         res.send(error.message)
     }
 })
+
+/*
+    This next REST endpoint is for my IssueTrackingApp. I am creating it as a workaround so I can use the NodeJS
+    package 'response-time' on a Spring-boot app. I will not be using the redis stuff in this method
+    because I am testing the Redis connected to my Spring-boot app and not this app.
+*/
+app.get('/issueApp/getAllTestModels', async (req, res, next) => {
+    try {
+        const response = await axios.get('http://localhost:8080/testApi/TestModels')
+        res.send(response.data)
+    } catch (error) {
+        res.send(error.message)
+    }
+})
+
+
 // Set up the port Express listens on.
 app.listen(3000, () => console.log('Rocket on port 3000'))
