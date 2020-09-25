@@ -1,5 +1,7 @@
 # Using thhe vscode extension "REST Client" by humao.rest-client
-# publisher = "Huachao Mao" 
+# publisher = "Huachao Mao"
+# Remember, the respective server must
+# be running locally.
 
 ### GET all rockets
 
@@ -8,3 +10,6 @@ GET http://localhost:3000/rockets
 ### Get rocket by rocket_id
 
 GET http://localhost:3000/rockets/falcon1
+
+### GET all method from the IssueTrackingApp
+GET http://localhost:3000/issueApp/getAllTestModels
