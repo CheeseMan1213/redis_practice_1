@@ -12,4 +12,12 @@ GET http://localhost:3000/rockets
 GET http://localhost:3000/rockets/falcon1
 
 ### GET all method from the IssueTrackingApp
+
 GET http://localhost:3000/issueApp/getAllTestModels
+
+### Get all from domain name
+
+GET http://localhost:3000/issueApp/getAllTestModelsFromDomainName
+###
+GET https://app.james2ch9developer.com:8443/testApi/TestModels
+
