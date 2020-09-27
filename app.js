@@ -77,13 +77,22 @@ app.get('/rockets/:rocket_id', async (req, res, next) => {
 })
 
 /*
-    This next REST endpoint is for my IssueTrackingApp. I am creating it as a workaround so I can use the NodeJS
-    package 'response-time' on a Spring-boot app. I will not be using the redis stuff in this method
-    because I am testing the Redis connected to my Spring-boot app and not this app.
+    These next REST endpoints are for my IssueTrackingApp. I am creating these as a workaround so I
+    can use the NodeJS package 'response-time' on a Spring-boot app. I will not be using the redis
+    stuff in this method because I am testing the Redis connected to my Spring-boot app and
+    not this app.
 */
 app.get('/issueApp/getAllTestModels', async (req, res, next) => {
     try {
         const response = await axios.get('http://localhost:8080/testApi/TestModels')
+        res.send(response.data)
+    } catch (error) {
+        res.send(error.message)
+    }
+})
+app.get('/issueApp/getAllTestModelsFromDomainName', async (req, res, next) => {
+    try {
+        const response = await axios.get('https://app.james2ch9developer.com:8443/testApi/TestModels')
         res.send(response.data)
     } catch (error) {
         res.send(error.message)
